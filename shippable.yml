@@ -7,7 +7,6 @@ runtime:
 build:
     ci:
     - echo "Hello world!!!!"
-    - cat /proc/cpuinfo
     - file /bin/bash
     - uname -m
     - uname -a
