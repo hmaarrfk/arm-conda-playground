@@ -17,6 +17,8 @@ build:
     - echo yes | bash Berryconda3-2.0.0-Linux-armv7l.sh -b
     - export PATH=/root/berryconda3/bin:$PATH
     - conda --version
+    - conda config --show channels
+    - conda config --show
     - conda update conda --yes
     - conda --version
     - conda install conda-build --yes
