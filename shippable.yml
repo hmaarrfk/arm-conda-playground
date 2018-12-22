@@ -13,7 +13,7 @@ build:
     - uname -a
     # Eventually maybe we can move this procedure to a docker container
     - wget https://repo.continuum.io/miniconda/Miniconda-latest-Linux-armv7l.sh
-    - bash Miniconda-latest-Linux-armv7l.sh
+    - bash Miniconda-latest-Linux-armv7l.sh -b
 
 
 # disable email notification
