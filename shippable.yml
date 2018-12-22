@@ -2,11 +2,14 @@ language: none
 
 runtime:
     # nodePool: shippable_shared_aarch64
-    nodePool: shippable_shared_aarch32
+      nodePool: shippable_shared_aarch32
 
 build:
     ci:
     - echo "Hello world!!!!"
+    - cat /proc/cpuinfo
+    - file /bin/bash
+    - uname -m
     - uname -a
     # Eventually maybe we can move this procedure to a docker container
     - wget https://repo.continuum.io/miniconda/Miniconda-latest-Linux-armv7l.sh
