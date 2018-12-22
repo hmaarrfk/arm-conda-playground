@@ -1,0 +1,25 @@
+language: none
+
+runtime:
+    # nodePool: shippable_shared_aarch64
+    nodePool: shippable_shared_aarch32
+
+build:
+    ci:
+    - echo "Hello world!!!!"
+    - uname -a
+    # Eventually maybe we can move this procedure to a docker container
+    - wget https://repo.continuum.io/miniconda/Miniconda-latest-Linux-armv7l.sh
+    - bash Miniconda-latest-Linux-armv7l.sh
+
+
+# disable email notification
+# of CI job result
+integrations:
+  notifications:
+    - integrationName: email
+      type: email
+      on_success: never
+      on_failure: never
+      on_cancel: never
+      on_pull_request: never
