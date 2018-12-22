@@ -1,0 +1,42 @@
+{% set version = "3.8.2" %}
+
+package:
+  name: dummy
+  version: {{ version }}
+
+#source:
+  #url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  #sha256: d58439c548433adcda98e695be53e526ba940a4b9c44fb9a05d92cd495cdd47f
+
+build:
+  number: 0
+  script: echo "hello world!!!!"
+  #script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+
+#requirements:
+  #build:
+    # if your project compiles code (such as a C extension) then add the required compilers as separate entries here.
+    # compilers are named 'c', 'cxx' and 'fortran'.
+    #- {{ compiler('c') }}
+  #host:
+    #- python
+    #- pip
+  #run:
+    #- python
+
+test:
+  #imports:
+    #- simplejson
+  commands:
+    - echo hello world
+
+about:
+  home: https://github.com/hmaarrfk/arm-conda-playground/
+  license: MIT
+  license_family: MIT
+  summary: 'Just a dummy test'
+
+extra:
+  recipe-maintainers:
+    - hmaarrfk
+

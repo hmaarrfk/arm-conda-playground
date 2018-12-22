@@ -16,6 +16,8 @@ build:
     - echo yes | bash Miniconda3-latest-Linux-armv7l.sh -b
     - export PATH=/root/miniconda3/bin:$PATH
     - conda --version
+    - conda install conda-build
+    - conda build meta.yaml
 
 
 # disable email notification
