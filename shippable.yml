@@ -14,6 +14,7 @@ build:
     # Eventually maybe we can move this procedure to a docker container
     - wget https://repo.continuum.io/miniconda/Miniconda-latest-Linux-armv7l.sh
     - echo yes | bash Miniconda-latest-Linux-armv7l.sh -b
+    - export $PATH=/root/miniconda/bin:$PATH
     - conda --version
 
 
