@@ -19,6 +19,7 @@ build:
     - conda --version
     - conda config --show channels
     - conda config --show
+    - conda config --add channels rpi
     - conda update conda --yes
     - conda --version
     - conda install conda-build --yes
