@@ -15,7 +15,7 @@ build:
     - wget -q https://github.com/hmaarrfk/arm-conda-playground/releases/download/0.1.0/Archiconda3-0.1.0-Linux-aarch64.sh
     #- wget -q https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-armv7l.sh
     #- echo yes | bash Miniconda3-latest-Linux-armv7l.sh -b
-    - bash Archiconda3-0.1.0-Linux-armv7l.sh -b
+    - bash Archiconda3-0.1.0-Linux-aarch64.sh -b
     - export PATH=/root/archiconda3/bin:$PATH
     - conda --version
     - conda config --show
