@@ -1,5 +1,5 @@
 name: Archiconda3
-version: 0.1.0
+version: 0.1.1
 
 channels:
   - https://conda.anaconda.org/jjhelmus/label/aarch64_bootstrap
@@ -7,6 +7,7 @@ channels:
 conda_default_channels:
   - https://conda.anaconda.org/jjhelmus/label/aarch64_bootstrap
 
+write_condarc: True
 license_file: ../installer_license.txt
 
 specs:
