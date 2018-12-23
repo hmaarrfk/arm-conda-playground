@@ -1,8 +1,8 @@
 language: none
 
 runtime:
-    # nodePool: shippable_shared_aarch64
-      nodePool: shippable_shared_aarch32
+    nodePool: shippable_shared_aarch64
+    # nodePool: shippable_shared_aarch32
 
 build:
     ci:
@@ -11,14 +11,14 @@ build:
     - uname -m
     - uname -a
     # Eventually maybe we can move this procedure to a docker container
-    - wget -q https://github.com/jjhelmus/berryconda/releases/download/v2.0.0/Berryconda3-2.0.0-Linux-armv7l.sh
+    #- wget -q https://github.com/jjhelmus/berryconda/releases/download/v2.0.0/Berryconda3-2.0.0-Linux-armv7l.sh
+    - wget -q https://github.com/hmaarrfk/arm-conda-playground/releases/download/0.1.0/Archiconda3-0.1.0-Linux-aarch64.sh
     #- wget -q https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-armv7l.sh
     #- echo yes | bash Miniconda3-latest-Linux-armv7l.sh -b
-    - echo yes | bash Berryconda3-2.0.0-Linux-armv7l.sh -b
-    - export PATH=/root/berryconda3/bin:$PATH
+    - bash Archiconda3-0.1.0-Linux-armv7l.sh -b
+    - export PATH=/root/archiconda3/bin:$PATH
     - conda --version
     - conda config --show
-    - conda config --add channels rpi
     - conda update conda --yes
     - conda --version
     - conda install conda-build --yes
